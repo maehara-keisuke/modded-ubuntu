@@ -44,6 +44,8 @@ distro() {
         echo -e "\n${R} [${W}-${R}]${G} Distro already installed."${W}
         exit 0
     else
+        sed -e 's|https://github.com/termux/proot-distro/releases/download/v2.3.1/ubuntu-aarch64-pd-v2.3.1.tar.xz|https://github.com/termux/proot-distro/releases/download/v2.2.0/ubuntu-aarch64-pd-v2.2.0.tar.xz|g' /data/data/com.termux/files/usr/etc/proot-distro/ubuntu.sh
+        sed -e 's|599a0af87b110a9eab9f6f84b43243e497a73403397aeddb0d0b3cdb4ea54aa6|486de37668963c1b6a0d131e33b91486be8eb1919b0813ad03726885753feba6|g' /data/data/com.termux/files/usr/etc/proot-distro/ubuntu.sh
         proot-distro install ubuntu
         termux-reload-settings
     fi
@@ -84,7 +86,7 @@ permission() {
         chmod +x $PREFIX/bin/ubuntu
         termux-reload-settings
         banner
-        echo -e "\n${R} [${W}-${R}]${G} Ubuntu-21.04(CLI) is now Installed on your Termux"${W}
+        echo -e "\n${R} [${W}-${R}]${G} Ubuntu-20.04.3(CLI) is now Installed on your Termux"${W}
         echo -e "\n${R} [${W}-${R}]${G} Restart your Termux to Prevent Some Issues."${W}
         echo -e "\n${R} [${W}-${R}]${G} Type ${C}ubuntu${G} to run Ubuntu CLI."${W}
         echo -e "\n${R} [${W}-${R}]${G} If you Want to Use UBUNTU in GUI MODE then ,"${W}
