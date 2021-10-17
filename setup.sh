@@ -76,7 +76,7 @@ permission() {
     if [[ -e "$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/user.sh" ]]; then
         chmod +x $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/user.sh
     else
-        wget https://raw.githubusercontent.com/modded-ubuntu/modded-ubuntu/master/distro/user.sh
+        wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/develop/distro/user.sh
         mv -f user.sh $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/user.sh
         chmod +x $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/user.sh
     fi
