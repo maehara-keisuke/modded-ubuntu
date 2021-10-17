@@ -33,10 +33,10 @@ login() {
     adduser $user
     echo "proot-distro login --user $user ubuntu" > /data/data/com.termux/files/usr/bin/ubuntu
     #chmod +x /data/data/com.termux/files/usr/bin/ubuntu 
-    wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/master/distro/gui.sh
+    wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/develop/distro/gui.sh
     mv -vf gui.sh /home/$user/gui.sh
     chmod +x /home/$user/gui.sh
-    wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/master/distro/ros2-foxy.sh
+    wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/develop/distro/ros2-foxy.sh
     mv -vf ros2-foxy.sh /home/$user/ros2-foxy.sh
     chmod +x /home/$user/ros2-foxy.sh
     clear
