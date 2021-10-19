@@ -155,7 +155,7 @@ vnc() {
 
     # set password for tigervncserver
     echo -e "${R} [${W}-${R}]${C} Setting up TigerVNC Password..."${W}
-    echo -e "${R} [${W}-${R}]${C} (you need to set 'Strong' Password with 8 characters)"${W}
+    echo -e "${R} [${W}-${R}]${C} (you need to set view-only password, too)"${W}
     tigervncpasswd
 }
 
