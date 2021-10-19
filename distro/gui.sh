@@ -153,6 +153,10 @@ vnc() {
     echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile 
     source /etc/profile
 
+    # set password for tigervncserver
+    echo -e "${R} [${W}-${R}]${C} Setting up VNC Password..."${W}
+    echo -e "${R} [${W}-${R}]${C} (you need to set 'Strong' Password with 8 characters)"${W}
+    vncpasswd
 }
 
 note() {
