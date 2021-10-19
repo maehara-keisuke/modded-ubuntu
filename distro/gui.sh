@@ -154,9 +154,9 @@ vnc() {
     source /etc/profile
 
     # set password for tigervncserver
-    echo -e "${R} [${W}-${R}]${C} Setting up VNC Password..."${W}
+    echo -e "${R} [${W}-${R}]${C} Setting up TigerVNC Password..."${W}
     echo -e "${R} [${W}-${R}]${C} (you need to set 'Strong' Password with 8 characters)"${W}
-    vncpasswd
+    tigervncpasswd
 }
 
 note() {
@@ -185,8 +185,8 @@ note() {
 
 package
 #chromium
-theme
-font
+#theme
+#font
 #refs
 vnc
 note
