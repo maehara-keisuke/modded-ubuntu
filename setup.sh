@@ -44,6 +44,7 @@ distro() {
         echo -e "\n${R} [${W}-${R}]${G} Distro already installed."${W}
         exit 0
     else
+        # replace hirsute img by focal img
         sed -e 's|hirsute|focal|g' -i /data/data/com.termux/files/usr/etc/proot-distro/ubuntu.sh
         sed -e 's|https://github.com/termux/proot-distro/releases/download/v2.3.1/ubuntu-aarch64-pd-v2.3.1.tar.xz|https://github.com/termux/proot-distro/releases/download/v2.2.0/ubuntu-aarch64-pd-v2.2.0.tar.xz|g' -i /data/data/com.termux/files/usr/etc/proot-distro/ubuntu.sh
         sed -e 's|599a0af87b110a9eab9f6f84b43243e497a73403397aeddb0d0b3cdb4ea54aa6|486de37668963c1b6a0d131e33b91486be8eb1919b0813ad03726885753feba6|g' -i /data/data/com.termux/files/usr/etc/proot-distro/ubuntu.sh

@@ -181,8 +181,8 @@ note() {
 
 package
 #chromium
-#theme
-#font
+theme
+font
 #refs
 vnc
 note
