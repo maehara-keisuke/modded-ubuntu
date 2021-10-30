@@ -28,7 +28,7 @@
 
 ### Installation
 
-- Install Termux from [F-Droid](https://f-droid.org/en/packages/com.termux/)
+- Install Termux from [F-Droid](https://f-droid.org/packages/com.termux/)
 
 - First Clone the Repository & Run the setup File
 
