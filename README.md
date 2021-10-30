@@ -16,22 +16,25 @@
 
 ### Features
 
+- ROS2 Foxy Desktop
 - Fixed Audio Output
-- Lightweight {Requires at least 4GB Storage}
-- Katoolin3 tool for installing kali tools
-- 2 Browsers (Chromium & Mozilla Firefox)
-- Supports Bangla Fonts
-- VLC Media Player
-- Visual Studio Code
+- ~~Lightweight {Requires at least 4GB Storage}~~
+- ~~Katoolin3 tool for installing kali tools~~
+- ~~2 Browsers (Chromium & Mozilla Firefox)~~
+- ~~Supports Bangla Fonts~~
+- ~~VLC Media Player~~
+- ~~Visual Studio Code~~
 - Easy for Beginners
 
 ### Installation
+
+- Install Termux from [F-Droid](https://f-droid.org/en/packages/com.termux/)
 
 - First Clone the Repository & Run the setup File
 
   - `pkg update -y && pkg upgrade -y`
   - `pkg install git wget -y`
-  - `git clone git://github.com/modded-ubuntu/modded-ubuntu.git`
+  - `git clone git://github.com/maehara-keisuke/modded-ubuntu.git`
   - `cd modded-ubuntu`
   - `bash setup.sh`
 
@@ -53,6 +56,10 @@
 
   - Type `vncstart` to run Vncserver
   - Type `vncstop` to stop Vncserver
+
+- Type the following commands to install ROS2 Foxy Desktop
+
+  - `bash ros2-foxy.sh`
 
 - Install VNC VIEWER Apk on your Device. [Google Play Store](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&hl=en)
 
@@ -87,6 +94,7 @@ Termux Proot Distro - https://github.com/termux/proot-distro
 
 - **Mustakim Ahmed** (https://github.com/BDhackers009)
 - **Tahmid Rayat** (https://github.com/htr-tech)
+- **MAEHARA Keisuke** (https://github.com/maehara-keisuke)
 
 ### If you like our work then dont forget to give a Star :)
 
