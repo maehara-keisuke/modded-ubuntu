@@ -51,6 +51,8 @@
   - `bash gui.sh`
 
 - **You have to note your VNC password !!**
+  - You should also set view-only password
+  - If you missed that, type `vncpasswd` to retry
 
 - Type the following commands to install ROS2 Foxy Desktop
 
