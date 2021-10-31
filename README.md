@@ -1,5 +1,5 @@
 <p align="center">
-<img src="./distro/image.jpg">
+<img src="./images/system.png">
 </p>
 <p align="center">
 <img src="https://img.shields.io/badge/MADE%20IN-BANGLADESH-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge">
@@ -52,14 +52,14 @@
 
 - **You have to note your VNC password !!**
 
-- Ubuntu image is now successfully installed .
-
-  - Type `vncstart` to run Vncserver
-  - Type `vncstop` to stop Vncserver
-
 - Type the following commands to install ROS2 Foxy Desktop
 
   - `bash ros2-foxy.sh`
+
+- Ubuntu image and ROS2 Foxy Desktop is now successfully installed .
+
+  - Type `vncstart` to run Vncserver
+  - Type `vncstop` to stop Vncserver
 
 - Install VNC VIEWER Apk on your Device. [Google Play Store](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android&hl=en)
 
@@ -68,6 +68,21 @@
 - Click on Connect & Input the Password 
 - Enjoy :D
 
+### Running Rviz Demo
+
+- Open a terminal and type the following commands
+    - `source /opt/ros/foxy/setup.bash`
+    - `ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py`
+- Open another terminal and type the following commands
+  - `source /opt/ros/foxy/setup.bash`
+  - `rviz2`
+- Configure global frame to `world`, and add `TF`
+- Look at the [Tutorial](https://docs.ros.org/en/foxy/Tutorials/dummy-robot-demo.html) for more details
+
+<p align="center">
+<img src="./images/rviz2.gif">
+</p>
+
 ### NOTE :
 
 - **Type `ubuntu` to run Ubuntu CLI.**
@@ -75,10 +90,6 @@
 - **Type `vncstop` to stop Vncserver**
 
 - **Type `bash remove.sh` to remove Ubuntu Modded Os**
-
-### Video Tutorial : 
-
-[![Watch the Tutorial](./distro/image1.jpg)](https://mega.nz/embed/QvIC1TLQ#3z27MRNPwANAg6JTtx1Ei8kDouOZsZgk00bg4TsJMNQ!1m)
 
 ### Credits : 
 
