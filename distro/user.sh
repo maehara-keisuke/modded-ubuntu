@@ -39,6 +39,9 @@ login() {
     wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/develop/distro/ros2-foxy.sh
     mv -vf ros2-foxy.sh /home/$user/ros2-foxy.sh
     chmod +x /home/$user/ros2-foxy.sh
+    wget https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/develop/distro/ros-noetic.sh
+    mv -vf ros-noetic.sh /home/$user/ros-noetic.sh
+    chmod +x /home/$user/ros-noetic.sh
     clear
     echo
     echo -e "\n${R} [${W}-${R}]${G} Restart your Termux & Type ${C}ubuntu"${W}
