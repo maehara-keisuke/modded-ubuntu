@@ -44,8 +44,8 @@ distro() {
         echo -e "\n${R} [${W}-${R}]${G} Distro already installed."${W}
         exit 0
     else
-        mv $PREFIX/usr/etc/proot-distro/ubuntu.sh $PREFIX/usr/etc/proot-distro/ubuntu.sh.bkup
-        cp ./distro/ubuntu.sh $PREFIX/usr/etc/proot-distro/
+        mv $PREFIX/etc/proot-distro/ubuntu.sh $PREFIX/etc/proot-distro/ubuntu.sh.bkup
+        cp ./distro/ubuntu.sh $PREFIX/etc/proot-distro/ubuntu.sh
         proot-distro install ubuntu
         termux-reload-settings
     fi
