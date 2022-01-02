@@ -18,7 +18,7 @@ banner() {
 }
 
 ros-noetic() {
-    echo -e "${R} [${W}-${R}]${C} Installing ROS Noetic(ROS Base) ..."${W}
+    echo -e "${R} [${W}-${R}]${C} Installing ROS Noetic(Desktop) ..."${W}
 
     sudo apt update && sudo apt install curl gnupg2 lsb-release
     sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
