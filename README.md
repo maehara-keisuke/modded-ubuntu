@@ -33,6 +33,7 @@
 - First Clone the Repository & Run the setup File
 
   - `pkg update -y && pkg upgrade -y`
+    - If this command fails, try `termux-change-repo`. [For details](https://www.youtube.com/watch?v=Fn6uam4Je8o).
   - `pkg install git wget -y`
   - `git clone https://github.com/maehara-keisuke/modded-ubuntu.git`
   - `cd modded-ubuntu`
@@ -67,6 +68,7 @@
 
 - Open VNC VIEWER & Click on + Button & Enter the Address `localhost:1` & Name anything you like
 - Set the Picture Quality to High for better Quality
+  - If you met VNC disconnected suddenly, try to set Picture Quality to Medium.
 - Click on Connect & Input the Password 
 - Enjoy :D
 
@@ -87,7 +89,7 @@
 
 ### NOTE :
 
-- **Type `ubuntu` to run Ubuntu CLI.**
+- **Type `ubuntu` to run Ubuntu CLI.**https://www.youtube.com/watch?v=Fn6uam4Je8o
 - **Type `vncstart` to run Vncserver**
 - **Type `vncstop` to stop Vncserver**
 
