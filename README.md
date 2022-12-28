@@ -109,7 +109,6 @@ Termux Proot Distro - https://github.com/termux/proot-distro
 
 - **Mustakim Ahmed** (https://github.com/BDhackers009)
 - **Tahmid Rayat** (https://github.com/htr-tech)
-- **MAEHARA Keisuke** (https://github.com/maehara-keisuke)
 
 ### If you like our work then dont forget to give a Star :)
 
