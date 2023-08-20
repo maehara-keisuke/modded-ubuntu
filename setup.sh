@@ -5,7 +5,7 @@ G="$(printf '\033[1;32m')"
 Y="$(printf '\033[1;33m')"
 B="$(printf '\033[1;34m')"
 C="$(printf '\033[1;36m')"
-W="$(printf '\033[1;37m')" 
+W="$(printf '\033[1;37m')"
 
 CURR_DIR=$(realpath "$(dirname "$BASH_SOURCE")")
 UBUNTU_DIR="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
@@ -13,9 +13,9 @@ UBUNTU_DIR="$PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu"
 banner() {
 	clear
 	cat <<- EOF
-		${Y}    _  _ ___  _  _ _  _ ___ _  _    _  _ ____ ___  
-		${C}    |  | |__] |  | |\ |  |  |  |    |\/| |  | |  \ 
-		${G}    |__| |__] |__| | \|  |  |__|    |  | |__| |__/ 
+		${Y}    _  _ ___  _  _ _  _ ___ _  _    _  _ ____ ___
+		${C}    |  | |__] |  | |\ |  |  |  |    |\/| |  | |  \
+		${G}    |__| |__] |__| | \|  |  |__|    |  | |__| |__/
 
 	EOF
 	echo -e "${G}     A modded gui version of ubuntu for Termux\n\n"${W}
@@ -24,7 +24,7 @@ banner() {
 package() {
 	banner
 	echo -e "${R} [${W}-${R}]${C} Checking required packages..."${W}
-	
+
 	[ ! -d '/data/data/com.termux/files/home/storage' ] && echo -e "${R} [${W}-${R}]${C} Setting up Storage.."${W} && termux-setup-storage
 
 	if [[ $(command -v pulseaudio) && $(command -v proot-distro) ]]; then
@@ -44,15 +44,17 @@ package() {
 distro() {
 	echo -e "\n${R} [${W}-${R}]${C} Checking for Distro..."${W}
 	termux-reload-settings
-	
+
 	if [[ -d "$UBUNTU_DIR" ]]; then
 		echo -e "\n${R} [${W}-${R}]${G} Distro already installed."${W}
 		exit 0
 	else
+		mv $PREFIX/etc/proot-distro/ubuntu.sh $PREFIX/etc/proot-distro/ubuntu.sh.bkup
+		cp ./distro/ubuntu.sh $PREFIX/etc/proot-distro/ubuntu.sh
 		proot-distro install ubuntu
 		termux-reload-settings
 	fi
-	
+
 	if [[ -d "$UBUNTU_DIR" ]]; then
 		echo -e "\n${R} [${W}-${R}]${G} Installed Successfully !!"${W}
 	else
