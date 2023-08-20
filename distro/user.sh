@@ -37,13 +37,13 @@ login() {
     echo "${user}:${pass}" | chpasswd
     echo "$user ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
     echo "proot-distro login --user $user ubuntu --bind /dev/null:/proc/sys/kernel/cap_last_last --shared-tmp --fix-low-ports" > /data/data/com.termux/files/usr/bin/ubuntu
-    #chmod +x /data/data/com.termux/files/usr/bin/ubuntu 
-    
+    #chmod +x /data/data/com.termux/files/usr/bin/ubuntu
+
     if [[ -e '/data/data/com.termux/files/home/modded-ubuntu/distro/gui.sh' ]];then
         cp /data/data/com.termux/files/home/modded-ubuntu/distro/gui.sh /home/$user/gui.sh
         chmod +x /home/$user/gui.sh
     else
-        wget -q --show-progress https://raw.githubusercontent.com/modded-ubuntu/modded-ubuntu/master/distro/gui.sh
+        wget -q --show-progress https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/distro/gui.sh
         mv -vf gui.sh /home/$user/gui.sh
         chmod +x /home/$user/gui.sh
     fi

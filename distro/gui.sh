@@ -18,9 +18,9 @@ check_root(){
 banner() {
 	clear
 	cat <<- EOF
-		${Y}    _  _ ___  _  _ _  _ ___ _  _    _  _ ____ ___  
-		${C}    |  | |__] |  | |\ |  |  |  |    |\/| |  | |  \ 
-		${G}    |__| |__] |__| | \|  |  |__|    |  | |__| |__/ 
+		${Y}    _  _ ___  _  _ _  _ ___ _  _    _  _ ____ ___
+		${C}    |  | |__] |  | |\ |  |  |  |    |\/| |  | |  \
+		${G}    |__| |__] |__| | \|  |  |__|    |  | |__| |__/
 
 	EOF
 	echo -e "${G}     A modded gui version of ubuntu for Termux\n"
@@ -57,7 +57,7 @@ package() {
 	echo "" > /var/lib/dpkg/info/udisks2.postinst
 	dpkg --configure -a
 	apt-mark hold udisks2
-	
+
 	packs=(sudo gnupg2 curl nano git xz-utils at-spi2-core xfce4 xfce4-goodies xfce4-terminal librsvg2-common menu inetutils-tools dialog exo-utils tigervnc-standalone-server tigervnc-common tigervnc-tools dbus-x11 fonts-beng fonts-beng-extra gtk2-engines-murrine gtk2-engines-pixbuf apt-transport-https)
 	for hulu in "${packs[@]}"; do
 		type -p "$hulu" &>/dev/null || {
@@ -65,7 +65,7 @@ package() {
 			apt-get install "$hulu" -y --no-install-recommends
 		}
 	done
-	
+
 	apt-get update -y
 	apt-get upgrade -y
 }
@@ -88,7 +88,7 @@ install_vscode() {
 		apt update -y
 		apt install code -y
 		echo "Patching.."
-		curl -fsSL https://raw.githubusercontent.com/modded-ubuntu/modded-ubuntu/master/patches/code.desktop > /usr/share/applications/code.desktop
+		curl -fsSL https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/patches/code.desktop > /usr/share/applications/code.desktop
 		echo -e "${C} Visual Studio Code Installed Successfully\n${W}"
 	}
 }
@@ -99,7 +99,7 @@ install_sublime() {
 		echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 		curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor > /etc/apt/trusted.gpg.d/sublime.gpg 2> /dev/null
 		apt update -y
-		apt install sublime-text -y 
+		apt install sublime-text -y
 		echo -e "${C} Sublime Text Editor Installed Successfully\n${W}"
 	}
 }
@@ -125,7 +125,7 @@ install_chromium() {
 install_firefox() {
 	[[ $(command -v firefox) ]] && echo "${Y}Firefox is already Installed!${W}\n" || {
 		echo -e "${G}Installing ${Y}Firefox${W}"
-		bash <(curl -fsSL "https://raw.githubusercontent.com/modded-ubuntu/modded-ubuntu/master/distro/firefox.sh")
+		bash <(curl -fsSL "https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/distro/firefox.sh")
 		echo -e "${G} Firefox Installed Successfully\n${W}"
 	}
 }
@@ -156,7 +156,7 @@ install_softwares() {
 		read -n1 -p "${R} [${G}~${R}]${Y} Select an Option: ${G}" IDE_OPTION
 		banner
 	}
-	
+
 	cat <<- EOF
 		${Y} ---${G} Media Player ${Y}---
 
@@ -217,7 +217,7 @@ downloader(){
 sound_fix() {
 	echo "$(echo "bash ~/.sound" | cat - /data/data/com.termux/files/usr/bin/ubuntu)" > /data/data/com.termux/files/usr/bin/ubuntu
 	echo "export DISPLAY=":1"" >> /etc/profile
-	echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile 
+	echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
 	source /etc/profile
 }
 
@@ -262,7 +262,7 @@ config() {
 	tar -xvzf icons.tar.gz -C "/usr/share/icons/"
 	tar -xvzf wallpaper.tar.gz -C "/usr/share/backgrounds/xfce/"
 	tar -xvzf gtk-themes.tar.gz -C "/usr/share/themes/"
-	tar -xvzf ubuntu-settings.tar.gz -C "/home/$username/"	
+	tar -xvzf ubuntu-settings.tar.gz -C "/home/$username/"
 	rm -fr $temp_folder
 
 	echo -e "${R} [${W}-${R}]${C} Purging Unnecessary Files.."${W}
@@ -287,4 +287,3 @@ package
 install_softwares
 config
 note
-
