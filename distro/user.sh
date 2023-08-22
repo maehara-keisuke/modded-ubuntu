@@ -46,6 +46,9 @@ login() {
         wget -q --show-progress https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/distro/gui.sh
         mv -vf gui.sh /home/$user/gui.sh
         chmod +x /home/$user/gui.sh
+        wget -q --show-progress https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/distro/ros2-humble.sh
+        mv -vf ros2-humble.sh /home/$user/ros2-humble.sh
+        chmod +x /home/$user/ros2-humble.sh
     fi
 
     clear
