@@ -42,6 +42,8 @@ login() {
     if [[ -e '/data/data/com.termux/files/home/modded-ubuntu/distro/gui.sh' ]];then
         cp /data/data/com.termux/files/home/modded-ubuntu/distro/gui.sh /home/$user/gui.sh
         chmod +x /home/$user/gui.sh
+        cp /data/data/com.termux/files/home/modded-ubuntu/distro/ros2-humble.sh /home/$user/ros2-humble.sh
+        chmod +x /home/$user/ros2-humble.sh
     else
         wget -q --show-progress https://raw.githubusercontent.com/maehara-keisuke/modded-ubuntu/humble/distro/gui.sh
         mv -vf gui.sh /home/$user/gui.sh
